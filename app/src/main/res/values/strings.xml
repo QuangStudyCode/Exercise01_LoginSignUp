@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Exercise01_Login&amp;SignUp</string>
+    <string name="login">Login</string>
+    <string name="sign_up">Sign Up</string>
+</resources>
