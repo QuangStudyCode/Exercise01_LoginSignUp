@@ -1,122 +1,144 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F1EFEF"
-    android:orientation="vertical"
-    tools:context=".SignUpActivity">
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="10dp"
-        android:gravity="center_vertical"
-        android:orientation="horizontal">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="5dp"
-            android:text="@string/sign_up"
-            android:textColor="@color/black"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-        <ImageView
-            android:layout_width="20dp"
-            android:layout_height="19dp"
-            android:src="@drawable/man" />
-
-    </LinearLayout>
+    android:background="#F4F1F1">
 
     <TextView
+        android:id="@+id/tv1SignUp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="10dp"
-        android:text="Welcome"
-        android:textSize="14sp" />
+        android:layout_margin="@dimen/_20sdp"
+        android:text="Sign Up"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_20sdp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 
     <ImageView
-        android:layout_width="296dp"
-        android:layout_height="231dp"
-        android:layout_gravity="center"
-        android:layout_marginTop="60dp"
-        android:src="@drawable/shoping1" />
+        android:id="@+id/imgPerson"
+        android:layout_width="@dimen/_25sdp"
+        android:layout_height="@dimen/_25sdp"
+        android:src="@drawable/person"
+
+        app:layout_constraintBottom_toTopOf="@id/tv2SignUp"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintLeft_toRightOf="@+id/tv1SignUp"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.783" />
+
+    <TextView
+        android:id="@+id/tv2SignUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Welcome"
+        android:textSize="@dimen/_13sdp"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv1SignUp" />
+
+    <ImageView
+        android:id="@+id/imgViewSignUp"
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="@dimen/_200sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:src="@drawable/shoping1"
+        app:layout_constraintBottom_toTopOf="@id/edtSignUpPhone"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv2SignUp" />
 
     <EditText
         android:id="@+id/edtSignUpPhone"
         android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginEnd="20dp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
         android:background="@drawable/custom_editext_login"
         android:hint="Enter number"
-        android:inputType="number"
-        android:paddingStart="10dp" />
+        android:paddingStart="@dimen/_10sdp"
+        app:layout_constraintBottom_toTopOf="@id/edtSignUpPass"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imgViewSignUp" />
 
     <EditText
         android:id="@+id/edtSignUpPass"
         android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginEnd="20dp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
         android:background="@drawable/custom_editext_login"
         android:hint="Enter password"
-        android:inputType="textPassword"
-        android:paddingStart="10dp" />
+        android:paddingStart="@dimen/_10sdp"
+        app:layout_constraintBottom_toTopOf="@id/edtSignUpComfirm"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edtSignUpPhone" />
 
     <EditText
         android:id="@+id/edtSignUpComfirm"
         android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="25dp"
-        android:layout_marginEnd="20dp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
         android:background="@drawable/custom_editext_login"
         android:hint="Comfirm password"
-        android:inputType="textPassword"
-        android:paddingStart="10dp" />
+        android:paddingStart="@dimen/_10sdp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edtSignUpPass"
+        tools:layout_editor_absoluteX="0dp" />
 
-
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnSignUp"
         android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="35dp"
-        android:layout_marginEnd="20dp"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
         android:background="@drawable/custom_button_login"
-        android:text="@string/sign_up"
+        android:text="Sign Up"
         android:textAllCaps="false"
         android:textColor="@color/white"
-        android:textStyle="bold" />
+        android:textSize="@dimen/_13sdp"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/edtSignUpComfirm" />
 
 
-    <LinearLayout
-        android:layout_marginTop="20dp"
-        android:gravity="center_horizontal"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="10dp"
+    <TextView
+        android:id="@+id/tv3SignUp"
 
-            android:text="Already have an account?" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Already have an account?"
+        app:layout_constraintBaseline_toBaselineOf="@+id/tvBackLogin"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintLeft_toLeftOf="@id/btnSignUp"
+        app:layout_constraintRight_toLeftOf="@id/tvBackLogin" />
 
-        <TextView
-            android:id="@+id/tvBackLogin"
-            android:textColor="@color/black"
-            android:textStyle="bold"
-            android:text="Login"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
-    </LinearLayout>
+    <TextView
+        android:id="@+id/tvBackLogin"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="76dp"
+        android:text="Login"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btnSignUp"
+        app:layout_constraintTop_toBottomOf="@+id/btnSignUp" />
+</androidx.constraintlayout.widget.ConstraintLayout>
 
-
-
-</LinearLayout>
